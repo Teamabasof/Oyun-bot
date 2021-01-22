@@ -1,0 +1,22 @@
+
+{
+  "name": "Bugalemon",
+  "description": "Söz Oyunu",
+  "keywords": [
+    "telegram",
+    "best",
+    "group",
+    "manager",
+    "3"
+  ],
+  "repository": "https://github.com/texnocom/bugalemon",
+  
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "10"
+      }
+    }
+  ]
+}
