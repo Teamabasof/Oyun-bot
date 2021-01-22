@@ -37,7 +37,7 @@ def setup_logger():
 
 
 def help(update, context):
-    update.message.reply_text('Bugalemon 🦎 Əmrlər:\n' +
+    update.message.reply_text('Lizard 🦎 Əmrlər:\n' +
                               '/game - Yeni Bir Oyun Başladın\n' +
                               '/master - Aparıcı Olmaq\n' +
                               '/top - Reytinq', reply_to_message_id=True)
@@ -66,13 +66,13 @@ def button(update, context):
 def command_start(update, context: CallbackContext):
     if update.effective_chat.type == "private":
         
-        addme = InlineKeyboardButton(text="🦎 Məni Qrupa əlavə et!", url="https://t.me/bugalemonbot?startgroup=a")
-        kanal = InlineKeyboardButton(text="📣 Lahiyə Kanalı", url="https://t.me/bugalemonbot?startgroup=a")
-        admin = InlineKeyboardButton(text="🧑‍💻 Sahib", url="https://t.me/bugalemonbot?startgroup=a")
+        addme = InlineKeyboardButton(text="🦎 Məni Qrupa əlavə et!", url="https://t.me/LizardGameAz_bot?startgroup=a")
+        kanal = InlineKeyboardButton(text="📣 Lahiyə Kanalı", url="https://t.me/LizardGameAz_bot?startgroup=a")
+        admin = InlineKeyboardButton(text="🧑‍💻 Sahib", url="https://t.me/LizardGameAz_bot?startgroup=a")
         
         keyboard = [[addme],[kanal],[admin]]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        update.message.reply_text('Salam Məm Bugalemon Bot\nMəni Grupa Qataraq Oyun Başlada Bilərsiniz\n\nDaha ətraflı /help', reply_to_message_id=True, reply_markup=reply_markup)
+        update.message.reply_text('Salam Məm Lizard Bot\nMəni Grupa Qataraq Oyun Başlada Bilərsiniz\n\nDaha ətraflı /help', reply_to_message_id=True, reply_markup=reply_markup)
     else:
         chat_id = update.message.chat.id
         user_id = update.message.from_user.id
@@ -86,7 +86,7 @@ def command_start(update, context: CallbackContext):
         game = get_or_create_game(chat_id)
         game.start()
 
-        update.message.reply_text('Bugalemon Oyunu Başladı!🦎'.format(username), reply_to_message_id=True)
+        update.message.reply_text('Lizard Oyunu Başladı!🦎'.format(username), reply_to_message_id=True)
 
         set_master(update, context)
 
