@@ -72,7 +72,7 @@ def command_start(update, context: CallbackContext):
         
         keyboard = [[addme],[kanal],[admin]]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        update.message.reply_text('Salam Məm Lizard Bot\nMəni Grupa Qataraq Oyun Başlada Bilərsiniz\n\nDaha ətraflı /help', reply_to_message_id=True, reply_markup=reply_markup)
+        update.message.reply_text('Salam Mən Lizard Bot\nMəni Grupa Qataraq Oyun Başlada Bilərsiniz\n\nDaha ətraflı /help', reply_to_message_id=True, reply_markup=reply_markup)
     else:
         chat_id = update.message.chat.id
         user_id = update.message.from_user.id
