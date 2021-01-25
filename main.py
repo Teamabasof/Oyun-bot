@@ -37,7 +37,7 @@ def setup_logger():
 
 
 def help(update, context):
-    update.message.reply_text('Lizard 🦎 Əmrlər:\n' +
+    update.message.reply_text('AKM Bot 🦎 Əmrlər:\n' +
                               '/game - Yeni Bir Oyun Başladın\n' +
                               '/master - Aparıcı Olmaq\n' +
                               '/top - Reytinq', reply_to_message_id=True)
@@ -72,7 +72,7 @@ def command_start(update, context: CallbackContext):
         
         keyboard = [[addme],[kanal],[admin]]
         reply_markup = InlineKeyboardMarkup(keyboard)
-        update.message.reply_text('Salam Mən Lizard Bot\nMəni Grupa Qataraq Oyun Başlada Bilərsiniz\n\nDaha ətraflı /help', reply_to_message_id=True, reply_markup=reply_markup)
+        update.message.reply_text('Salam Mən Akm Söz Oyunu Bot\nMəni Grupa Qataraq Oyun Başlada Bilərsiniz\n\nDaha ətraflı /help', reply_to_message_id=True, reply_markup=reply_markup)
     else:
         chat_id = update.message.chat.id
         user_id = update.message.from_user.id
@@ -86,7 +86,7 @@ def command_start(update, context: CallbackContext):
         game = get_or_create_game(chat_id)
         game.start()
 
-        update.message.reply_text('Lizard Oyunu Başladı!🦎'.format(username), reply_to_message_id=True)
+        update.message.reply_text('Akm Söz Oyunu Başladi!🦎'.format(username), reply_to_message_id=True)
 
         set_master(update, context)
 
